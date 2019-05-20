@@ -1,0 +1,27 @@
+{
+  "name": "t3-frontend-web-ashish-gh",
+  "version": "1.0.0",
+  "description": "Frontend application for WEB API ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stw304cem/t3-frontend-web-ashish-gh.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "jquery"
+  ],
+  "author": "ashish ghimire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stw304cem/t3-frontend-web-ashish-gh/issues"
+  },
+  "homepage": "https://github.com/stw304cem/t3-frontend-web-ashish-gh#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}
