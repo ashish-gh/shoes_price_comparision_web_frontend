@@ -8,9 +8,10 @@ window.onload = function() {
       const email = emialNode.value;
       const password = passwordNode.value;
       
+      console.log(email,password);
       // create a http request similar to postman
       
-      fetch('http://localhost:8000/api/auth', {
+      fetch('http://localhost:8005/api/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -21,6 +22,7 @@ window.onload = function() {
         })
       })
       .then(data => {
+        alert('user not found');
         return data.json();
       })
       .then(json => {
