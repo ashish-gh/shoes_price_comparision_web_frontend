@@ -22,6 +22,7 @@
   "homepage": "https://github.com/stw304cem/t3-frontend-web-ashish-gh#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "fetch": "^1.1.0",
     "jquery": "^3.4.1",
     "package.json": "^2.0.1"
   }
