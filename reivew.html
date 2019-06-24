@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/profile.css">
-
+  <link rel="stylesheet" href="css/review.css">
 </head>
 <body>
 
@@ -24,9 +23,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <!-- <li><a style="text-decoration: hidden;">as </a></li> -->
-        <li><a href="dashboard.html">Profile</a></li>
-        <li><a href="review.html">Review</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="review.html">My Review</a></li>
         <li><a href="index.html">Logout</a></li>
       </ul>
     </div>
@@ -38,8 +36,8 @@
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>ShopWithUs</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="dashboard.html">Profile</a></li>
-        <li><a href="review.html">Review</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="review.html">My Review</a></li>
         <li><a href="index.html">Logout</a></li>
       </ul><br>
     </div>
@@ -47,26 +45,32 @@
     
     <div class="col-sm-9">
       <div class="well">
-        <h4>My Profile</h4>
+        <h4>My Review</h4>
         <hr>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8"></div>
-        <div class="col-sm-2"></div>
-
-        <form class="form-signin">
-            <div class="form-label-group">
-            <label for="inputEmail">Email address</label>
-              <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
-            </div>
-            <div class="form-label-group">
-            <label for="inputPassword">Password</label>
-              <input type="password" id="password" class="form-control" placeholder="Password" required>
-            </div>        
-            <br>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="updateProfile">Update</button>
-          </form>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Review</th>
+                <th scope="col">Shoes</th>
+                <th scope="col">Date</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><a href="editReview.html">Edit</a></td>
+                <td><a href="deleteReview.html">Delete</a></td>
+              </tr>              
+            </tbody>
+          </table>
       </div>
-
     </div>
   </div>
 </div>
