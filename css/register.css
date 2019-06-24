@@ -1,10 +1,7 @@
-/* floating labels */
-
 html,
 body {
   height: 100%;
 }
-
 body {
   display: -ms-flexbox;
   display: flex;
@@ -20,6 +17,25 @@ body {
   max-width: 420px;
   padding: 15px;
   margin: auto;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.register-account{
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
 .form-label-group {
@@ -80,6 +96,115 @@ body {
   font-size: 12px;
   color: #777;
 }
+/* design for form */
+
+/* design for form */
+
+input[type=email],input[type=password]{
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  
+}
+
+#register {
+  border:1px solid #005f81;
+  border-radius: 1px;
+  font-size: 18px;
+  background-color: #005f81;
+  color: #f2f2f2;
+  }
+  
+.register-account a{
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 450px) {
+  .mb-4{
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+}
+
+@media only screen and (min-width:450px) {
+  .mb-4{
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+      
+}
+
+@media only screen and (min-width:500px) {
+  .mb-4{
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+  .mb-4{
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mb-4{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+} 
+
+@media only screen and (min-width: 992px) {
+  .mb-4{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+} 
+
+@media only screen and (min-width: 1200px) {
+  .mb-4{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+  
+
+
+
+
 
 /* Fallback for Edge
 -------------------------------------------------- */

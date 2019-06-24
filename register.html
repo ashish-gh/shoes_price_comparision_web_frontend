@@ -6,36 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Register</title>
-
-
+    <title>ShopWithUs</title>
     <!-- Bootstrap core CSS -->
-<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    <link href="css/bootstrap-register.css"" rel="stylesheet">
     </style>
     <!-- Custom styles for this template -->
-    <link href="floating-label.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
   </head>
   <body>
     <form class="form-signin">
   <div class="text-center mb-4">
-    <img class="mb-4" src="food.jpg" alt="" width="72" height="72">
+    <a href="index.html">
+      <img class="mb-4" src="" alt="" width="72" height="72">
+    </a>
+    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
   </div>
 
   <div class="form-label-group">
@@ -44,20 +28,19 @@
   </div>
 
   <div class="form-label-group">
-      <input type="password" id="password" class="form-control" placeholder="Password" required>
-      <label for="inputPassword">Password</label>
-    </div>
+    <input type="password" id="password" class="form-control" placeholder="Password" required>
+    <label for="inputPassword">Password</label>
+  </div>
 
-    <div class="form-label-group">
-        <input type="password" id="confirmPassword" class="form-control" placeholder="Password" required>
-        <label for="inputConfirmPassword">Confirm  password</label>
-      </div>
-      
-  <button class="btn btn-lg btn-primary btn-block" id="register" type="submit">Sign up</button>
+  <div class="form-label-group">
+    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+    <label for="inputPassword">Confirm Password</label>
+  </div>
+
+  
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" id="register">Regster</button>
+  <p class="register-account"><a href="login.html"> Already have an account? </a> Log in </p>
 </form>
-
-      <!-- for login -->
-      <script src="script/register.js"></script>
-
 </body>
 </html>
