@@ -1,0 +1,30 @@
+.row.content {height: 550px}
+    
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+    
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;} 
+}
+
+input[type=email],input[type=password]{
+    border: 1px solid #ddd;
+    border-radius: 1px; 
+    margin-bottom: 10px;
+  }
+  
+  #updateProfile {
+    border:1px solid #005f81;
+    border-radius: 1px;
+    font-size: 18px;
+    background-color: #005f81;
+    color: #f2f2f2;
+    }
+    
+  .register-account a{
+    text-decoration: none;
+   
+  }
+    
