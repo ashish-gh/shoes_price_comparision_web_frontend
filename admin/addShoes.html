@@ -1,27 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Allrecipes</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src='../node_modules/bootstrap/dist/css/bootstrap.css'></script>
+  <title>ShopWithUs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/review.css">
 </head>
 <body>
-    <div class="container">
-        add shoes
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="dashboard.html">ShopWithUs<o/a>
     </div>
-    <input type="text" id="shoesBrand" placeholder="shoes brand"><br>
-    <input type="text" id="shoesName" placeholder="shoes name"><br>
-    <input type="text" id="shoesPrice" placeholder="shoes price"><br>
-    <input type="text" id="shoesDescription" placeholder="shoes description"><br>
-    <input type="text" id="shoesImageName" placeholder="shoes image name"><br>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="review.html">My Review</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>ShopWithUs</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="review.html">My Review</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul><br>
+    </div>
+    <br>
     
-    <button id="addShoes">add shoes</button>
-    
-    
-    
-                  
-<script src="addShoes.js"></script>
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>My Review</h4>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Review</th>
+                <th scope="col">Shoes</th>
+                <th scope="col">Date</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><a href="editReview.html">Edit</a></td>
+                <td><a href="deleteReview.html">Delete</a></td>
+              </tr>              
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
