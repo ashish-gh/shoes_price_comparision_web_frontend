@@ -29,7 +29,9 @@ window.onload = function() {
         return data.json();
       })
       .then(json => {
+        console.log(""+json.status);
         if (json.status === 'success') {
+
             alert('store added successfully');
         } else {
           alert('store not added successfully');
