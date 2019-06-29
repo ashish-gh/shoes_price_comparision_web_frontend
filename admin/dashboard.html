@@ -50,6 +50,8 @@
       </ul><br>
     </div>
     <br>
+
+    <div id="displayUser"></div>
     
     <div class="col-sm-9">
       <div class="well">
@@ -60,6 +62,18 @@
         <div class="col-sm-2"></div>
 
         <form class="form-signin">
+            <div class="form-label-group">
+                <label for="inputEmail">First Name</label>
+                  <input type="email" id="firstName" class="form-control" placeholder="First "Name required autofocus>
+                </div>
+                <div class="form-label-group">
+                  <label for="inputEmail">Last Name</label>
+                    <input type="email" id="lastName" class="form-control" placeholder="Last Name" required autofocus>
+                  </div>
+                <div class="form-label-group">
+                    <label for="inputEmail">Contact Number</label>
+                <input type="email" id="contact" class="form-control" placeholder="Contact Number" required autofocus>
+            </div>                        
             <div class="form-label-group">
             <label for="inputEmail">Email address</label>
               <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
@@ -76,6 +90,6 @@
     
   </div>
 </div>
-
+<script src="../script/getUserById.js"></script>
 </body>
 </html>
