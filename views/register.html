@@ -8,18 +8,33 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <title>ShopWithUs</title>
     <!-- Bootstrap core CSS -->
-    <link href="../assets/bootstrap/bootstrap-register.css"" rel="stylesheet">
+    <link href="../assets/bootstrap/bootstrap-register.css" rel="stylesheet">
     </style>
     <!-- Custom styles for this template -->
     <link href="../assets/css/register.css" rel="stylesheet">
   </head>
+
   <body>
-    <form class="form-signin">
+
+<div class="form-signin">
   <div class="text-center mb-4">
     <a href="index.html">
-      <img class="mb-4" src="" alt="" width="72" height="72">
+      <img class="mb-4" src="" alt="img" width="72" height="72">
     </a>
     <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" id="firstName" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">First Name</label>
+  </div>
+  <div class="form-label-group">
+    <input type="text" id="lastName" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">Last Name</label>
+  </div>
+  <div class="form-label-group">
+    <input type="text" id="contactNumber" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">Contact Number</label>
   </div>
 
   <div class="form-label-group">
@@ -34,13 +49,15 @@
 
   <div class="form-label-group">
     <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+    <span id="msg_password"></span>
     <label for="inputPassword">Confirm Password</label>
-  </div>
-
-  
+  </div>  
 
   <button class="btn btn-lg btn-primary btn-block" type="submit" id="register">Regster</button>
   <p class="register-account"><a href="login.html"> Already have an account? </a> Log in </p>
-</form>
+</div>
+
+<!-- script for register -->
+<script src="register.js"></script>
 </body>
 </html>
