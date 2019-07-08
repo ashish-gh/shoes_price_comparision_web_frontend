@@ -1,10 +1,10 @@
-# Your Project Title
+# ShoesPriceComparision(ShopWithUs)
 
-Name: Your full name here
+Name: Ashish Ghimire
 
-CollegeID: Your college ID
+CollegeID: 160196
 
-Batch: Jan19A/19B/19C/19D
+Batch: Jan19B
 
 
 # Frontend code architecture
