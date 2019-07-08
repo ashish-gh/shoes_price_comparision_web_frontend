@@ -1,0 +1,64 @@
+body {
+    font-family: 'lato', sans-serif;
+    background: #e7e7e7;
+  }
+  
+
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18%;
+}
+
+  .row.content {
+    height: 550px
+  }
+  
+  #title{
+      color: #e7e7e7;
+  }
+
+  
+  #update {
+    border:1px solid #005f81;
+    border-radius: 1px;
+    font-size: 18px;
+    background-color: #005f81;
+    color: #f2f2f2;
+  }
+  
+  .sidenav {
+    font-family: 'lato', sans-serif;    
+    height: 100%;
+    /* width: 160px; */
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333333;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  
+  .sidenav a {
+    font-family: 'lato', sans-serif;    
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #e7e7e7;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #201818;
+  }
+  
+  
+  .register-account a{
+    text-decoration: none;   
+  }
+    

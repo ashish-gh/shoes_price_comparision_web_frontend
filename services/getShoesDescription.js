@@ -34,7 +34,7 @@ function getData(){
                 getShopDescription(data.dataResult[i].shopId);
             }                          
           }else if(data.status = 'fail'){
-              alert("No data found");
+              // alert("No data found");
           }
       })
       .catch(error =>{
@@ -75,7 +75,7 @@ function getShopDescription(shopId){
 
 function getReview(){
     var txt='';
-    fetch('http://localhost:3800/review', {
+    fetch('http://localhost:3800/review/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -97,6 +97,7 @@ function getReview(){
                 document.getElementById("reviewDetails").innerHTML = txt;
             }
         }
+
       })
       .catch(error=>{
         console.log("Error : "+ error);        
