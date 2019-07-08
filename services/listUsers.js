@@ -1,116 +1,65 @@
 window.onload = function() {
 
-  
-  get_Data();
-
-
-  function get_Data(){
-		let html='',
-		newtr = document.createElement( "tr" ),
-        existingbody = document.getElementById( "displayUser" );     
-		$.ajax({
-       type:'GET',
-       dataType:'JSON',       
-        url:'http://localhost:8005/api/users',
-        success:function(data){
-            // console.log(data);
-            $.each(data, function(data,value) {          
-                html +='<tr><td>'+value.userId+'</td>'+
-                '<td>'+value.firstName+'</td>' +
-                '<td>'+value.lastName+'</td>'+
-                '<td>'+value.email+'</td>'+
-        '<td>  <a class="delete" id="delete" onclick="delete_contact('+ value.userId +');" ><i class="material-icons"  data-toggle="modal" data-target="#myModal">&#xE254;</i></a>'+
-				  '</tr>';
-            });
-            $( "tbody" ).append( html, [ newtr, existingbody ] );        
-        }        
-	});
+  getUsers();
 }
 
-const button = document.getElementById('deleteUser');
-button.addEventListener('click', function() {
-  const userId=$("#cdelid").val();      
-
-  console.log("this is  userid : " + userId);
-  $.ajax({
-    type:'DELETE',
-  dataType:'JSON',
-  data:{userId:userId},
+function getUsers(){
+  var txt='';      
+  fetch('http://localhost:3800/users', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'        
+        }
+      })
+      .then(response=>{
+        return response.json();
+      })
+      .then(data => {
+        
+        for(var i =0; i < data.dataResult.length; i++){                             
+          txt +='<td scope="row">'+data.dataResult[i].userId +'</td>'
+          txt +='<td scope="row">'+data.dataResult[i].firstName +'</td>'
+          txt +='<td scope="row">'+data.dataResult[i].lastName +'</td>'
+          txt +='<td scope="row">'+data.dataResult[i].email +'</td>'
+         
+                  txt +='<td><button class="btn btn-danger" onclick="deleteUserModel('+ data.dataResult[i].userId+')" data-toggle="modal" data-target="#myModalDeleteUser"><span class="glyphicon glyphicon-trash"></span>  Delete</button></td>'
+                  txt +='</tr>'           
+                  txt +='</tbody>'
+            txt+='</table>'
+          document.getElementById("displayUser").innerHTML = txt;
+        }
+    })
+      .catch(error => {
+        console.log(error)
+      });
+}
     
-     url:'http://localhost:8005/api/:userId',
- success:function(data){
-   if(data==='yes')
-         {
-     alert("Deleted");
-     get_Data();
-         }
- }
-  });
- });
 
 
- const deleteClick = document.getElementById('delete');
- deleteClick.addEventListener('click', function(){
-  // console.log("user id  + " + id);
-  // $('[id="cdelid"]').val(id);
 
-  // alert()
- });
- 
-      function delete_contact(id){
-        alert(id)
-        console.log("user id  + " + id);
-          $('[id="cdelid"]').val(id);
-         }
-
-
+// function myFunction(userId){
+// alert(userId)
   
+// }
 
+
+    //   <tbody id="displayUser">                
+    //   <tr>
+    //   </tr>           
+    // </tbody>
     
 
+      
 
 
+      // const deleteB = document.getElementById("deeleteUser");
+      // deleteB.addEventListener('click', delete_contact(4));
 
-
-
-
-
-
-  // var txt,myObj='';      
-  // fetch('http://localhost:8005/api/users', {
-  //       crossDomain:true,
-  //       method: 'GET',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         'Access-Control-Allow-Origin': '*'        }
-  //     })
-  //     .then(response=>{
-  //       return response.json();
-  //     })
-  //     .then(data => {
-
-  //       for(var i =0; i < data.length; i++){              
-               
-  //         txt +='<th scope="row">'+data[i].userId +'</th>'
-  //         txt +='<td>'+ data[i].firstName  +'</td>'
-  //         txt +='<td>'+ data[i].lastName +'</td>'
-  //                 txt +='<td>' + data[i].email+'</td>'
-  //                 txt +='<td><a id="deleteUser" data-toggle="modal" data-target="#myModal" href="delete.html?'+data[i].userId+'"> Delete </a></td>'
-  //                 txt +='</tr>'           
-  //                 txt +='</tbody>'
-  //           txt+='</table>'
-  //         document.getElementById("displayUser").innerHTML = txt;
-  //       }
-  //   })
-  //     .catch(error => {
-  //       console.log(error)
-  //     })
-
-
+      // delete_contact(4);
    
-      // function delete_contact(id){
-      //     $('[id="cdelid"]').val(id);
-      //    }
+    
+
 
       // to delete
   //   function onClick(event) {
@@ -176,5 +125,5 @@ button.addEventListener('click', function() {
       
 
 
-}
+
 

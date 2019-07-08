@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/review.css">
-
+  <link rel="stylesheet" href="../../assets/css/user.css">
 </head>
 <body>
 
@@ -30,7 +29,7 @@
         <li><a href="store.html">Stores</a></li>
         <li><a href="shoes.html">Shoes</a></li>
         <li><a href="review.html">Review</a></li>
-        <li><a href="index.html">Logout</a></li>
+        <li><a onclick="logoutUser()" >Logout</a></li>
       </ul>
     </div>
   </div>
@@ -40,20 +39,20 @@
 <div class="container-fluid">
     <div class="row content">
       <div class="col-sm-3 sidenav hidden-xs">
-        <h2>ShopWithUs</h2>
+        <h2 id="title">ShopWithUs</h2>
         <ul class="nav nav-pills nav-stacked">
             <li><a href="dashboard.html">Profile</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="store.html">Stores</a></li>
             <li><a href="shoes.html">Shoes</a></li>
             <li><a href="review.html">Review</a></li>
-            <li><a href="index.html">Logout</a></li>
-        </ul><br>
+            <li><a onclick="logoutUser()" >Logout</a></li>
+          </ul><br>
       </div>
       <br>
       
       <div class="col-sm-9">
-        <div class="well">
+        <div class="well" id="fromUsers">
           <h4>Users</h4>
           <hr>
           <table class="table table-bordered">
@@ -66,46 +65,47 @@
                   <th scope="col">Delete</th>                
                 </tr>
               </thead>
-              <a href="" id="delete">delete</a>
+
               <tbody id="displayUser">                
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>mark@gmail.com</td>
-                  <!-- <td><a data-toggle="modal" data-target="#myModal" id="deleteUser">Delete</a></td> -->
-                </tr>           
+                
               </tbody>
+              
             </table>
         </div>
       </div>
 
-<!-- display model for delete -->
-
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Delete User</h4>
-        </div>
-        <div class="modal-body">
-            <p>Are you sure you want to delete this record ?</p>
-            <p style="font-size: 12px; color:coral;"> This action cannot be undone ?</p>
+      <!-- model for deleting review -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModalDeleteUser" role="dialog">
+      <div class="modal-dialog">  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Delete Review</h4>
           </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="deleteUser" >Delete</button>
+          <div class="modal-body">
+              <p>Are you sure you want to delete this record?</p>
+              <p class="text-warning"><small>This action cannot be undone.</small></p>        
           </div>
+          <div class="modal-footer">
+              <input type="hidden" id="userId"> 
+              <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+              <input type="submit" id="deleteUser" class="btn btn-danger" value="Delete">
+            </div>
+        </div>      
       </div>
-      
     </div>
-  </div>
-  
-      
-    </div>
+  <!-- Model finish -->
+
+
+    </div>    
   </div>
 
-  <script src="../script/listUsers.js"></script>
-</body>
+
+  <script src="../../services/listUsers.js"></script>
+  <script src="../../services/deleteUser.js"></script>
+  <script src="../../services/logout.js"></script>
+
+  </body>
 </html>
