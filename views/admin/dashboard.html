@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/profile.css">
+  <link rel="stylesheet" href="../../assets/css/profile.css">
 
 </head>
 <body>
@@ -26,14 +26,11 @@
       <ul class="nav navbar-nav">
         <!-- <li><a style="text-decoration: hidden;">as </a></li> -->
         <li><a href="dashboard.html">Profile</a></li>
-<<<<<<< HEAD
-=======
         <li><a href="users.html">Users</a></li>
         <li><a href="store.html">Shoes</a></li>
         <li><a href="shoes.html">Shoes</a></li>
->>>>>>> admin
         <li><a href="review.html">Review</a></li>
-        <li><a href="index.html">Logout</a></li>
+        <li><a href="../index.html">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -42,17 +39,14 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>ShopWithUs</h2>
+      <h2 id="title">ShopWithUs</h2>
       <ul class="nav nav-pills nav-stacked">
         <li><a href="dashboard.html">Profile</a></li>
-<<<<<<< HEAD
-=======
         <li><a href="users.html">Users</a></li>
         <li><a href="store.html">Store</a></li>
         <li><a href="shoes.html">Shoes</a></li>
->>>>>>> admin
         <li><a href="review.html">Review</a></li>
-        <li><a href="index.html">Logout</a></li>
+        <li><a href="../index.html">Logout</a></li>
       </ul><br>
     </div>
     <br>
@@ -60,50 +54,22 @@
     <div id="displayUser"></div>
     
     <div class="col-sm-9">
-      <div class="well">
-<<<<<<< HEAD
-<<<<<<< HEAD
+      <div class="well" id="formProfile">
         <h4>My Profile</h4>
-=======
-        <h4>Add shoes</h4>
->>>>>>> admin
-=======
-        <h4>My Profile</h4>
->>>>>>> admin
-        <hr>
+       <hr>
         <div class="col-sm-2"></div>
         <div class="col-sm-8"></div>
         <div class="col-sm-2"></div>
+        <div class="form-signin" id="signIn">
 
-        <form class="form-signin">
-            <div class="form-label-group">
-                <label for="inputEmail">First Name</label>
-                  <input type="email" id="firstName" class="form-control" placeholder="First "Name required autofocus>
-                </div>
-                <div class="form-label-group">
-                  <label for="inputEmail">Last Name</label>
-                    <input type="email" id="lastName" class="form-control" placeholder="Last Name" required autofocus>
-                  </div>
-                <div class="form-label-group">
-                    <label for="inputEmail">Contact Number</label>
-                <input type="email" id="contact" class="form-control" placeholder="Contact Number" required autofocus>
-            </div>                        
-            <div class="form-label-group">
-            <label for="inputEmail">Email address</label>
-              <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
-            </div>
-            <div class="form-label-group">
-            <label for="inputPassword">Password</label>
-              <input type="password" id="password" class="form-control" placeholder="Password" required>
-            </div>        
-            <br>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="updateProfile">Update</button>
-          </form>
+        </div>
       </div>
     </div>
     
   </div>
 </div>
-<script src="../script/getUserById.js"></script>
+
+<script src="../../services/getUserById.js"></script>
+<script src="../../services/logout.js"></script>
 </body>
 </html>
