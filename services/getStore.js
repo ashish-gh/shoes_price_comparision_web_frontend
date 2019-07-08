@@ -1,52 +1,41 @@
+// it is called when page gets loaded
 window.onload = function() {
-
+    // to get list of store 
+      getStores();
+    }
   
-    get_Data();
+  // function to retrive data from database 
+  function getStores(){
+      var txt='';     
   
-  
-    function get_Data(){
-          let html='',
-          newtr = document.createElement( "tr" ),
-          existingbody = document.getElementById( "displayStore" );     
-          $.ajax({
-         type:'GET',
-         dataType:'JSON',       
-          url:'http://localhost:8005/api/store',
-          success:function(data){
-              // console.log(data);
-              $.each(data, function(data,value) {          
-                  html +='<tr><td>'+value.storeId+'</td>'+
-                  '<td>'+value.storeName+'</td>' +
-                  '<td>'+value.latitude+'</td>'+
-                  '<td>'+value.longitude+'</td>'+
-                  '<td>  <a class="delete" id="delete" onclick="delete_contact('+ value.storeId +');" ><i class="material-icons"  data-toggle="modal" data-target="#myModal">&#xE254;</i></a>'+
-                  '<td>  <a class="delete" id="delete" onclick="delete_contact('+ value.storeId +');" ><i class="material-icons"  data-toggle="modal" data-target="#myModal">&#xE254;</i></a>'+
-                  '</tr>';
-              });
-              $( "tbody" ).append( html, [ newtr, existingbody ] );        
-          }        
-      });
+      fetch('http://localhost:3800/shop', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*'        
+            }
+          })
+          .then(response=>{
+            return response.json();
+          })
+          .then(data => {
+            
+            for(var i =0; i < data.dataResult.length; i++){                             
+              txt +='<td scope="row">'+data.dataResult[i].shopId +'</td>'
+              txt +='<td scope="row">'+data.dataResult[i].shopName +'</td>'
+              txt +='<td scope="row">'+data.dataResult[i].shopLocation +'</td>'
+              txt +='<td scope="row">'+data.dataResult[i].shopDescription +'</td>'
+             
+              txt +='<td><button class="btn btn-success" onclick="loadShopModel('+ data.dataResult[i].shopId+')"  data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-refresh"></span> Edit</button></td>'
+              txt +='<td><button class="btn btn-danger" onclick="deleteShopModel('+ data.dataResult[i].shopId+')" data-toggle="modal" data-target="#myModalDeleteShop"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>'
+              txt +='</tr>'           
+                      txt +='</tbody>'
+                txt+='</table>'
+              document.getElementById("displayStore").innerHTML = txt;
+            }
+        })
+          .catch(error => {
+            console.log(error)
+          });
   }
   
-  const button = document.getElementById('deleteUser');
-  button.addEventListener('click', function() {
-    const userId=$("#cdelid").val();      
-  
-    console.log("this is  userid : " + userId);
-    $.ajax({
-      type:'DELETE',
-    dataType:'JSON',
-    data:{userId:userId},
-      
-       url:'http://localhost:8005/api/:userId',
-   success:function(data){
-     if(data==='yes')
-           {
-       alert("Deleted");
-       get_Data();
-           }
-   }
-    });
-   });  
-}
-    
