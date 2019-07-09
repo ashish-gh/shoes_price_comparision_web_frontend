@@ -5,9 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/shoesDescription.css">
+  
 </head>
 <body>
 
@@ -35,6 +38,8 @@
 
 <div class="container" >    
     <div class="row content">
+        <h3>Shoes Description</h3>
+
         <div class="col-sm-6" id="shoesDetails">
             <h4>Shoes Id</h4>
             <h4>Shoes Name </h4>
@@ -43,16 +48,17 @@
             <h4>Shoes Image Name </h4>            
             <h4>Shoes Store </h4>                        
         </div>
+        <h3>Shop Description</h3>
         <div class="col-sm-6" id="shopDetails">
-            <h4>Shop Id</h4>
             <h4>Store Name </h4>
             <h4>Store Location </h4>
             <h4>Store Description </h4>
         </div>                          
     </div>
 </div> 
-  <hr>
-<div class="container" >    
+<br>
+<hr>
+ <div class="container" >    
     <div class="row content">
         <div class="col-sm-6 col-md-6" id="reviewDetails">
             <h4>List of reiviews</h4>
@@ -61,8 +67,12 @@
         </div>
         <div class="col-md-6">
             <h4>Write your reiviews </h4>
-            <input type="text" id="review" >
-            <input type="button" value="Review" id="addReview">
+            <div class="form-group col-sm-4">
+                <input type="text" class="form-control" placeholder="Your review " id="review">
+              </div>
+              <div class="form-group col-sm-2">
+                  <input type="submit" class="form-control" id="addReview" value="Add" >
+                </div>
         </div>
     </div>
 </div>
@@ -70,7 +80,28 @@
       
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+            <h3> Connect With Us</h3>
+            <br>
+            <a href=""> <p><i class="fa fa-facebook-official" style="font-size:30px;color:rgb(62, 62, 204)"></i></p></a>
+            <a href=""></a><p><i class="fa fa-instagram" style="font-size:30px;color:rgb(236, 65, 93)"></i></p></a>
+            <a href=""></a><p><i class="fa fa-twitter" style="font-size:30px;color:rgb(62, 62, 204)"></i></p></a>
+            
+            </div>
+      <div class="col-sm-6">
+        <h3>Contact Us</h3>
+        <br>
+        <h5> <span class="glyphicon glyphicon-map-marker"></span> Kathmandu, Nepal</h5>        
+
+        <h5> <span class="glyphicon glyphicon-phone-alt"></span> 01-4474142</h5>
+      </div>
+          
+    </div>
+  </div>
+
+
 </footer>
 <script src="../services/getShoesDescription.js"></script>
 <script src="../services/addReview.js"></script>
