@@ -38,6 +38,7 @@ function addReviews(review, userId, shoeId){
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          
         },
         body: JSON.stringify({
           review: review,

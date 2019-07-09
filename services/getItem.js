@@ -24,7 +24,7 @@ function getShoes(){
           txt +=' <div id="display-container">'
           txt +='    <div id="display-container-left">'
           txt +='       <div id="image-container">'
-          txt +='        <img id="image-display" src="" alt="'+ data.dataResult[i].shoesImageName +'">'                            
+          txt +='        <img id="image-display" src="../assets/image/addidas.jpg" alt="'+ data.dataResult[i].shoesImageName +'">'                            
           txt +='       </div>'
           txt +='    </div>'
 // fetch data from shop table

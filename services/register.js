@@ -72,7 +72,7 @@ function registerUser(){
       .then(json => {
         if (json.status === 'success') {
           alert('registered successfully');
-          window.location.href = 'index.html';
+          window.location.href ='../views/';
         } 
         else if(json.status == 'exists'){
           alert('user already exists');
