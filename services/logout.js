@@ -4,10 +4,18 @@
 function logoutUser(){
 
     // clear all the tokens, cookies and sessions
-    localStorage.clear();
+    
+    if(localStorage.getItem("userType")=='admin'){
+        // redirect to index page
+        localStorage.clear();
 
-    // redirect to index page
-    window.location.href = '../index.html'
- 
+
+        window.location.href ='../../views/';
+    }else if(localStorage.getItem("userType")=='user'){
+        localStorage.clear();
+
+        window.location.href ='../views/';
+    }
+   
 }
 
