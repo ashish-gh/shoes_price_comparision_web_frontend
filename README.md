@@ -1,41 +1,50 @@
-# ShoesPriceComparision(ShopWithUs)
-
-Name: Ashish Ghimire
-
-CollegeID: 160196
-
-Batch: Jan19B
+# Shoes Price Comparision
+Shoes Price Comparison is an application which allows user to compare different store price for same shoes. This application includes a selection of different brands and compare price based on selected
+shoes. Information is displayed to user, which makes the user easily search store in a map as well.
 
 
-# Frontend code architecture
+## Pre-requisites
+All the dependencies is under `package.json` file. To install all dependencies you must install `Node.js' and 'npm`.
 
-# services
-Assets contain all contoller for js file.
+[Node.js installation](https://nodejs.org/en/) provides a practical guide for installation of Node.js.
 
-# views
-Views contail all html file
+[npm installation](https://docs.npmjs.com/cli/install) provides a practical guide for installation of npm.
 
-# assets
- Assets contains all css, bootstrap file
+Once `Node.js` and `npm` is installed, clone this repository and inside the cloned folder type this:
+
+```
+npm install package.json
+```
+
+## API usage
+```
+
+ * @api {get} /shoes/:shoesId Request Shoes information
+ * @shoesName Shoes
+ * @shoesDescription Shoes
  
- - ```assets/css/```
-
- - ```assets/js/``` 
-
- - ```assets/fonts/``` 
-
- - ```assets/images```
+ * @apiParam {Number} id User's unique ID.
  
- - ```assets/images/icons/``` 
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+```
 
+## HTTP requests
+All API requests are made by sending a secure HTTPS request using one of the following methods, depending on the action being taken:
 
+* [POST] Create a resource
+* [PUT] Update a resource
+* [GET] Get a resource or list of resources
+* [DELETE] Delete a resource
 
-## API Consumption
-- API is consumed via Fetch request 
+## HTTP response
+Each response will include a status object and (if successful) a `result` (result will be an object for single-record queries and an array for list queries). The status object contains an HTTP status_code, text, description, error_code (if an error occurred - see Error Codes) about the `result`. The `result` contains the result of a successful request. 
 
-- A function ajax is designed and used 	
-- ```services/addUser.js/```
+## HTTP response code
+Each response will be returned with one of the following HTTP status codes:
 
-- An Object Auth is designed and used for all user's authentication information
+* `200` `OK` The request was successful
+* `400` `Bad Request` There was a problem with the request (security, malformed, data validation, etc.)
+* `401` `Unauthorized` The supplied API credentials are invalid
+* `404` `Not found` An attempt was made to access a resource that does not exist in the API
 
-	- ```services/login.js/```
